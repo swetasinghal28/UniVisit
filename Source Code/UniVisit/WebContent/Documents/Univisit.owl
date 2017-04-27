@@ -1,0 +1,561 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Ontology rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio">
+        <versionIRI rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio/1.0"/>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasAddress -->
+
+    <ObjectProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasAddress">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Restaurant"/>
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#University"/>
+        <rdfs:range rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#InstAddress"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasBranch -->
+
+    <ObjectProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasBranch">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#University"/>
+        <rdfs:range rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Branch"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasContact -->
+
+    <ObjectProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasContact">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#University"/>
+        <rdfs:range rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Contact"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasHead -->
+
+    <ObjectProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasHead">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#University"/>
+        <rdfs:range rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Head"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasLocation -->
+
+    <ObjectProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasLocation">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Restaurant"/>
+        <rdfs:range rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Location"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasPlace -->
+
+    <ObjectProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasPlace">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#University"/>
+        <rdfs:range rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#City"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasRestaurants -->
+
+    <ObjectProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasRestaurants">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#City"/>
+        <rdfs:range rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Restaurant"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasTemp -->
+
+    <ObjectProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasTemp">
+        <rdfs:subPropertyOf rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#hasWeather"/>
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Weather"/>
+        <rdfs:range rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Temperature"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasWeather -->
+
+    <ObjectProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasWeather">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#City"/>
+        <rdfs:range rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Weather"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#offers -->
+
+    <ObjectProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#offers">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Restaurant"/>
+        <rdfs:range rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Facilities"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#AcceptsCreditCard -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#AcceptsCreditCard">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Facilities"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#Alochol -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#Alochol">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Facilities"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#Delivery -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#Delivery">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Facilities"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#Parking -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#Parking">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Facilities"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#TakeOut -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#TakeOut">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Facilities"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#WheelChairAccessible -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#WheelChairAccessible">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Facilities"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#WiFi -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#WiFi">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Facilities"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasAddress -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasAddress">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasApplicationURL -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasApplicationURL">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Contact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasAvgTemp -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasAvgTemp">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Temperature"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasClouds -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasClouds">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Weather"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasCrimeReports -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasCrimeReports">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Branch"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasFax -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasFax">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Contact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasHumidity -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasHumidity">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Weather"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasId -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasId">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#University"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasLatitude -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasLatitude">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Location"/>
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#University"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasLongitude -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasLongitude">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Location"/>
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#University"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasMaxTemp -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasMaxTemp">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Temperature"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasMinTemp -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasMinTemp">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Temperature"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasName -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasName">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Branch"/>
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#City"/>
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Restaurant"/>
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#University"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasOnCampusCrime -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasOnCampusCrime">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Branch"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasOnCampusHate -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasOnCampusHate">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Branch"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasPerson -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasPerson">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Head"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasPhone -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasPhone">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Contact"/>
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasPressure -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasPressure">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Weather"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasPriceRange -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasPriceRange">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasPublic_PropCrime -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasPublic_PropCrime">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Branch"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasRain -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasRain">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Weather"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasRating -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasRating">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasResiHallCrime -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasResiHallCrime">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Branch"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasReviewCount -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasReviewCount">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasStateCode -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasStateCode">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#InstAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasStreetAddress -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasStreetAddress">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#InstAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasTiming -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasTiming">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasTitle -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasTitle">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Head"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasWebsite -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasWebsite">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Contact"/>
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#hasZip -->
+
+    <DatatypeProperty rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#hasZip">
+        <rdfs:domain rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#InstAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#Branch -->
+
+    <Class rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#Branch">
+        <rdfs:subClassOf rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#University"/>
+    </Class>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#City -->
+
+    <Class rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#City"/>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#Contact -->
+
+    <Class rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#Contact">
+        <rdfs:subClassOf rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#University"/>
+    </Class>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#Facilities -->
+
+    <Class rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#Facilities">
+        <rdfs:subClassOf rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Restaurant"/>
+    </Class>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#Head -->
+
+    <Class rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#Head">
+        <rdfs:subClassOf rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#University"/>
+    </Class>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#InstAddress -->
+
+    <Class rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#InstAddress">
+        <rdfs:subClassOf rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#University"/>
+    </Class>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#Location -->
+
+    <Class rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#Location"/>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#Restaurant -->
+
+    <Class rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#Restaurant"/>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#Temperature -->
+
+    <Class rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#Temperature">
+        <rdfs:subClassOf rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#Weather"/>
+    </Class>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#University -->
+
+    <Class rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#University"/>
+    
+
+
+    <!-- http://www.knowYourSchool.org/ontology/SchoolBio#Weather -->
+
+    <Class rdf:about="http://www.knowYourSchool.org/ontology/SchoolBio#Weather">
+        <rdfs:subClassOf rdf:resource="http://www.knowYourSchool.org/ontology/SchoolBio#City"/>
+    </Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
